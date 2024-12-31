@@ -1,0 +1,51 @@
+{
+  "name": "vscode-neon",
+  "displayName": "NEON toolkit",
+  "description": "Syntax highlighting and code formatting for NEON files.",
+  "publisher": "Vaclav Kraus",
+  "author": {
+		"name": "Vaclav Kraus",
+		"email": "krauva@gmail.com"
+	},
+  "version": "0.0.1",
+  "icon": "icons/neon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krausv/vscode-neon"
+  },
+  "sponsor": {
+		"url": "https://github.com/krausv/vscode-neon"
+	},
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "keywords": [
+		"neon",
+		"nette",
+		"php"
+	],
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:neon"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "neon",
+        "aliases": ["Neon", "neon"],
+        "extensions": [".neon"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+         "light": "./icons/neon.png",
+         "dark": "./icons/neon.png"
+       }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "neon",
+        "scopeName": "source.neon",
+        "path": "./syntaxes/neon.tmLanguage.json"
+      }
+    ]
+  },
+  "main": "./extension.js"
+}
